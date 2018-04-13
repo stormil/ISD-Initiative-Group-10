@@ -4,19 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiplicationTable
+namespace Average
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter N for  multiplication table: ");
-            int numberN = Convert.ToInt32(Console.ReadLine());
+            int size = 5;
+            int[] array = new int[size];
 
-            for(int i = 1; i <= 20; i++)
+            Console.WriteLine("Enter 5 numbers:");
+            for(int i = 0; i < size; i++)
             {
-                Console.WriteLine($"{i} * {numberN} = {i * numberN}");
+                array[i] = Convert.ToInt32(Console.ReadLine());
             }
+
+            int summ = 0;
+
+            for(int i = 0; i < size; i++)
+            {
+                summ += array[i]; 
+            }
+
+            double aver = summ / (double)size;
+
+            Console.WriteLine($"Average is {aver}");
 
             Console.ReadKey();
         }
