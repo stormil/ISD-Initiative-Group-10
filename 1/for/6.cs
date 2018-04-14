@@ -19,7 +19,7 @@ namespace _2._6
                 Console.Write(array[i] + "  ");
             }
             int ans = 0;
-            for(int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 ans += array[i];
             }

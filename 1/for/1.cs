@@ -13,7 +13,7 @@ namespace MultiplicationTable
             Console.Write("Enter N for  multiplication table: ");
             int numberN = Convert.ToInt32(Console.ReadLine());
 
-            for(int i = 1; i <= 20; i++)
+            for (int i = 1; i <= 20; i++)
             {
                 Console.WriteLine($"{i} * {numberN} = {i * numberN}");
             }

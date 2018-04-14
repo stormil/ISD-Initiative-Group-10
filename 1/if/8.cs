@@ -14,13 +14,14 @@ namespace ConsoleApp2
             int prise = Convert.ToInt32(Console.ReadLine());
             Random rnd = new Random();
             int n = rnd.Next(1, 13);
-            if (n>=1 && n>=5)
+            if (n >= 1 && n >= 5)
             {
                 prise = 0;
                 Console.WriteLine("Вы проиграли :::'((( Ваш выигрыш составляет: " + prise);
             }
-            else if(n>=6 && n<=8){
-                Console.WriteLine("Вы ничего не потеряли но ничего и не выиграли. Ваш выигрыш составляет: " + prise); 
+            else if (n >= 6 && n <= 8)
+            {
+                Console.WriteLine("Вы ничего не потеряли но ничего и не выиграли. Ваш выигрыш составляет: " + prise);
             }
             else
             {

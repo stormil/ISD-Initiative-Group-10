@@ -16,14 +16,14 @@ namespace Сurrency
             Console.Write("Enter currency type(UAH, EUR, USD): ");
             string currencyType = Convert.ToString(Console.ReadLine());
 
-            if(currencyType == "UAH" || currencyType == "uah")
+            if (currencyType == "UAH" || currencyType == "uah")
             {
                 Console.WriteLine($"EUR: {money * (decimal)0.03}");
                 Console.WriteLine($"USD: {money * (decimal)0.04}");
             }
             else
             {
-                if(currencyType == "EUR" || currencyType == "eur")
+                if (currencyType == "EUR" || currencyType == "eur")
                 {
                     Console.WriteLine($"UAH: {money * (decimal)32.02}");
                     Console.WriteLine($"USD: {money * (decimal)1.23}");

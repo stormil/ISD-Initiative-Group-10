@@ -15,7 +15,7 @@ namespace _6
             Console.WriteLine("Enter number of Time of waiting: ");
             int TimeOfWaiting = Convert.ToInt32(Console.ReadLine());
             int price;
-            if(Kilometers <= 5)
+            if (Kilometers <= 5)
             {
                 price = 20 + TimeOfWaiting;
             }

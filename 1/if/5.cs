@@ -13,7 +13,7 @@ namespace DayOfWeek
             int dayNumber = Convert.ToInt32(Console.ReadLine());
             string dayName;
 
-            switch(dayNumber)
+            switch (dayNumber)
             {
                 case 1:
                     dayName = "Monday";

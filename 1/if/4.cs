@@ -12,9 +12,10 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Введите 1 или 0");
             int n = Convert.ToInt32(Console.ReadLine());
-            if(n<=1 && n>=0)
+            if (n <= 1 && n >= 0)
             {
-                if (n==1) {
+                if (n == 1)
+                {
                     Console.WriteLine("Хорошо");
                 }
                 else
@@ -22,7 +23,7 @@ namespace ConsoleApp1
                     Console.WriteLine("Плохо");
                 }
 
-            } 
+            }
             else
             {
                 Console.WriteLine("Вы не правильно ввели число");

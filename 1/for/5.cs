@@ -14,16 +14,16 @@ namespace Average
             int[] array = new int[size];
 
             Console.WriteLine("Enter 5 numbers:");
-            for(int i = 0; i < size; i++)
+            for (int i = 0; i < size; i++)
             {
                 array[i] = Convert.ToInt32(Console.ReadLine());
             }
 
             int summ = 0;
 
-            for(int i = 0; i < size; i++)
+            for (int i = 0; i < size; i++)
             {
-                summ += array[i]; 
+                summ += array[i];
             }
 
             double aver = summ / (double)size;

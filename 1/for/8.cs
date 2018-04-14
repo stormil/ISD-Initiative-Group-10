@@ -30,6 +30,5 @@ namespace ConsoleApp4
             while (!flag);
             Console.ReadKey();
         }
-        
     }
 }
