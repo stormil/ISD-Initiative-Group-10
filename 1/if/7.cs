@@ -6,23 +6,19 @@ using System.Threading.Tasks;
 
 namespace _7
 {
-    class Program
+    class Prime
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Write number:");
             int number = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i<1000; i++)
+            if (IsPrime(number))
             {
-                Console.WriteLine(i);
-                if (IsPrime(i))
-                {
-                    Console.WriteLine("Prime");
-                }
-                else
-                {
-                    Console.WriteLine("Not prime");
-                }
+                Console.WriteLine("Prime");
+            }
+            else
+            {
+                Console.WriteLine("Not prime");
             }
             Console.ReadKey();
         }

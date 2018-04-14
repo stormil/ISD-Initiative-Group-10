@@ -12,7 +12,7 @@ namespace _3
         {
             Console.OutputEncoding = Encoding.UTF8;
             // Convering console to russian
-            Console.WriteLine("Введите месяц:");
+            Console.WriteLine("Введите номер месяца:");
             int month = Convert.ToInt32(Console.ReadLine());
             string answer = WhatSeason(month);
             Console.WriteLine(answer);

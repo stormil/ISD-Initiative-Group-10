@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _7
 {
-    class Program
+    class GoosesAndRabbit
     {
         static void Main(string[] args)
         {

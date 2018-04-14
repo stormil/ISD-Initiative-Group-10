@@ -13,7 +13,7 @@ namespace _3
             Console.OutputEncoding = Encoding.UTF8;
             Random random = new Random();
             int randomNumber = random.Next(1, 147);
-            Console.WriteLine("Угадайте цифру от 1 до 147");
+            Console.WriteLine("Угадайте цифру от 1 до 146");
             int userNumber;
             do
             {
@@ -28,7 +28,7 @@ namespace _3
                 }
                 else
                 {
-                    Console.WriteLine("Поздравляем! Вы угадали слово!");
+                    Console.WriteLine("Поздравляем! Вы угадали число!");
                 }
             }
             while (userNumber != randomNumber);
