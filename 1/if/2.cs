@@ -11,14 +11,14 @@ namespace _2
         static void Main(string[] args)
         {
             Console.WriteLine("Enter Word: ");
-            string SoundByCat = "мяу";
-            string SoundByDog = "гав";
-            string EnteredWord = Console.ReadLine();
-            if (EnteredWord == SoundByCat)
+            string soundByCat = "мяу";
+            string soundByDog = "гав";
+            string enteredWord = Console.ReadLine();
+            if (enteredWord == soundByCat)
             {
                 Console.WriteLine("Покорми кота");
             }
-            else if (EnteredWord == SoundByDog)
+            else if (enteredWord == soundByDog)
             {
                 Console.WriteLine("Погуляй с собакой");
             }

@@ -11,17 +11,17 @@ namespace _6
         static void Main(string[] args)
         {
             Console.WriteLine("Enter number of km: ");
-            int Kilometers = Convert.ToInt32(Console.ReadLine());
+            int kilometers = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter number of Time of waiting: ");
-            int TimeOfWaiting = Convert.ToInt32(Console.ReadLine());
+            int timeOfWaiting = Convert.ToInt32(Console.ReadLine());
             int price;
-            if (Kilometers <= 5)
+            if (kilometers <= 5)
             {
-                price = 20 + TimeOfWaiting;
+                price = 20 + timeOfWaiting;
             }
             else
             {
-                price = 20 + (Kilometers - 5) * 3 + TimeOfWaiting;
+                price = 20 + (kilometers - 5) * 3 + timeOfWaiting;
             }
             Console.WriteLine("Your price is: " + price);
             Console.ReadKey();
