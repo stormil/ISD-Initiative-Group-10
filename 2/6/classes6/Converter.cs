@@ -11,11 +11,11 @@ namespace classes6
         private double usd;
         private double eur;
         private double rub;
-        public Converter(double _usd, double _eur, double _rub)
+        public Converter(double usd, double eur, double rub)
         {
-            usd = _usd;
-            eur = _eur;
-            rub = _rub;
+            this.usd = usd;
+            this.eur = eur;
+            this.rub = rub;
         }
         public double ConvertCurrency(double currency, int action)
         {
