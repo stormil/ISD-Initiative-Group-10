@@ -1,6 +1,0 @@
-c:\users\иван\documents\visual studio 2017\Projects\AdressTest\AdressTest\bin\Debug\AdressTest.exe.config
-c:\users\иван\documents\visual studio 2017\Projects\AdressTest\AdressTest\bin\Debug\AdressTest.exe
-c:\users\иван\documents\visual studio 2017\Projects\AdressTest\AdressTest\bin\Debug\AdressTest.pdb
-c:\users\иван\documents\visual studio 2017\Projects\AdressTest\AdressTest\obj\Debug\AdressTest.csprojResolveAssemblyReference.cache
-c:\users\иван\documents\visual studio 2017\Projects\AdressTest\AdressTest\obj\Debug\AdressTest.exe
-c:\users\иван\documents\visual studio 2017\Projects\AdressTest\AdressTest\obj\Debug\AdressTest.pdb
