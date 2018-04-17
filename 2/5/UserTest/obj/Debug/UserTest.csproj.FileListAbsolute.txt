@@ -1,0 +1,12 @@
+c:\users\иван\documents\visual studio 2017\Projects\UserTest\UserTest\bin\Debug\UserTest.exe.config
+c:\users\иван\documents\visual studio 2017\Projects\UserTest\UserTest\bin\Debug\UserTest.exe
+c:\users\иван\documents\visual studio 2017\Projects\UserTest\UserTest\bin\Debug\UserTest.pdb
+c:\users\иван\documents\visual studio 2017\Projects\UserTest\UserTest\obj\Debug\UserTest.csprojResolveAssemblyReference.cache
+c:\users\иван\documents\visual studio 2017\Projects\UserTest\UserTest\obj\Debug\UserTest.exe
+c:\users\иван\documents\visual studio 2017\Projects\UserTest\UserTest\obj\Debug\UserTest.pdb
+C:\Users\Иван\Documents\Visual Studio 2017\Projects\5\UserTest\bin\Debug\UserTest.exe.config
+C:\Users\Иван\Documents\Visual Studio 2017\Projects\5\UserTest\bin\Debug\UserTest.exe
+C:\Users\Иван\Documents\Visual Studio 2017\Projects\5\UserTest\bin\Debug\UserTest.pdb
+C:\Users\Иван\Documents\Visual Studio 2017\Projects\5\UserTest\obj\Debug\UserTest.csprojResolveAssemblyReference.cache
+C:\Users\Иван\Documents\Visual Studio 2017\Projects\5\UserTest\obj\Debug\UserTest.exe
+C:\Users\Иван\Documents\Visual Studio 2017\Projects\5\UserTest\obj\Debug\UserTest.pdb
