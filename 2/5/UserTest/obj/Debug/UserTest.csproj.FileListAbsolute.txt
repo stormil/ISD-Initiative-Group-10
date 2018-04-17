@@ -1,6 +1,0 @@
-c:\users\иван\documents\visual studio 2017\Projects\UserTest\UserTest\bin\Debug\UserTest.exe.config
-c:\users\иван\documents\visual studio 2017\Projects\UserTest\UserTest\bin\Debug\UserTest.exe
-c:\users\иван\documents\visual studio 2017\Projects\UserTest\UserTest\bin\Debug\UserTest.pdb
-c:\users\иван\documents\visual studio 2017\Projects\UserTest\UserTest\obj\Debug\UserTest.csprojResolveAssemblyReference.cache
-c:\users\иван\documents\visual studio 2017\Projects\UserTest\UserTest\obj\Debug\UserTest.exe
-c:\users\иван\documents\visual studio 2017\Projects\UserTest\UserTest\obj\Debug\UserTest.pdb
