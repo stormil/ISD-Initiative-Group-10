@@ -8,72 +8,72 @@ namespace UserTest
 {
     class User
     {
-        private string _login;
-        private string _name;
-        private string _surname;
-        private int _age;
-        private DateTime _fillingDate;
+        private string login;
+        private string name;
+        private string surname;
+        private int age;
+        private DateTime fillingDate;
 
         public User()
         {
-            _fillingDate = DateTime.Today;
+            fillingDate = DateTime.Today;
         }
 
         public string Login
         {
             get
             {
-                return _login;
+                return login;
             }
             set
             {
-                _login = value;
+                login = value;
             }
         }
         public string Name
         {
             get
             {
-                return _name;
+                return name;
             }
             set
             {
-                _name = value;
+                name = value;
             }
         }
         public string Surname
         {
             get
             {
-                return _surname;
+                return surname;
             }
             set
             {
-                _surname = value;
+                surname = value;
             }
         }
         public int Age
         {
             get
             {
-                return _age;
+                return age;
             }
             set
             {
-                _age = value <= 0 ? 0 : value;
+                age = value <= 0 ? 0 : value;
             }
         }
         public DateTime FillingDate
         {
             get
             {
-                return _fillingDate;
+                return fillingDate;
             }
         }
 
         public override string ToString()
         {
-            return _login + " " + _name + " " + _surname + " " + _age + " " + _fillingDate;
+            return login + " " + name + " " + surname + " " + age + " " + fillingDate;
         }
 
     }
