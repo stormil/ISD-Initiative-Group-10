@@ -36,6 +36,7 @@ namespace _7
         {
             get
             {
+                CalculateSalaryAndTax();
                 return salary;
             }
         }
@@ -44,11 +45,12 @@ namespace _7
         {
             get
             {
+                CalculateSalaryAndTax();
                 return tax;
             }
         }
 
-        public void CalculateSalaryAndTax()
+        private void CalculateSalaryAndTax()
         {
             switch (salary)
             {

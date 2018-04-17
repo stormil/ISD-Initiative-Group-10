@@ -16,7 +16,6 @@ namespace _7
                 Position = Employee.Post.SeniorDeveloper,
                 YearsOfExperience = 5
             };
-            employee.CalculateSalaryAndTax();
             Console.WriteLine(employee.Name + " " + employee.Surname + " works at position of " + employee.Position  +
                 " and earns " + employee.Salary + ". Tax: " + employee.Tax);
             Console.ReadKey();
