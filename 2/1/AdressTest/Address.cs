@@ -8,12 +8,12 @@ namespace AdressTest
 {
     class Address
     {
-        private int _index;
-        private string _country;
-        private string _city;
-        private string _street;
-        private int _house;
-        private int _apartment;
+        private int index;
+        private string country;
+        private string city;
+        private string street;
+        private int house;
+        private int apartment;
 
         public Address() { }
  
@@ -21,66 +21,66 @@ namespace AdressTest
         {
             get
             {
-                return _index;
+                return index;
             }
             set
             {
-                _index = value;
+                index = value;
             }
         }
         public string Country
         {
             get
             {
-                return _country;
+                return country;
             }
             set
             {
-                _country = value;
+                country = value;
             }
         }
         public string City
         {
             get
             {
-                return _city;
+                return city;
             }
             set
             {
-                _city = value;
+                city = value;
             }
         }
         public string Street
         {
             get 
             {
-                return _street;
+                return street;
             }
             set
             {
-                _street = value;
+                street = value;
             }
         }
         public int House
         {
             get
             {
-                return _house;
+                return house;
             }
             set
             {
-                _house = value;
+                house = value;
             }
         }
         public int Apartment
         {
             get
             {
-                return _apartment;
+                return apartment;
             }
             set
             {
-                _apartment = value;
+                apartment = value;
             }
         }
     }
