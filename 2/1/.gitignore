@@ -1,6 +1,6 @@
 /.vs/
-/AdressTest/bin
-/AdressTest/obj
-/AdressTest/Properties
+/AdressTest/bin/
+/AdressTest/obj/
+/AdressTest/Properties/
 /AdressTest/Address.csproj
 /AdressTest/App.config
