@@ -8,6 +8,16 @@ namespace _4
 {
     class Program
     {
+        static void ShowMenu()
+        {
+            Console.WriteLine(
+                "1 - открыть документ\n" +
+                "2 - отредактировать документ \n" +
+                "3 - сохранить документ \n" +
+                "4 - показать меню \n" +
+                "5 - выйти"
+                );
+        }
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
@@ -16,7 +26,7 @@ namespace _4
             key = Console.ReadLine();
 
             DocumentWorker documentWorker;
-            if (key=="exp")
+            if (key == "exp")
             {
                 documentWorker = new ExpertDocumentWorker();
             }
@@ -29,24 +39,37 @@ namespace _4
                 documentWorker = new DocumentWorker();
             }
 
-            Console.WriteLine("Что вы хотите сделать с докуметом?");
-            Console.WriteLine("1 - открыть \n2 - отредактировать \n3 - сохранить");
+            ShowMenu();
 
-            int action = Convert.ToInt32(Console.ReadLine());
-            switch (action)
+            int action = 0;
+            do
             {
-                case 1:
-                    documentWorker.OpenDocument();
-                    break;
-                case 2:
-                    documentWorker.EditDocument();
-                    break;
-                case 3:
-                    documentWorker.SaveDocument();
-                    break;
-            }
+                Console.WriteLine("Что вы хотите сделать?");
 
-            Console.ReadKey();
+                action = int.TryParse(Console.ReadLine(), out action) ? action : 0;
+
+                switch (action)
+                {
+                    case 1:
+                        documentWorker.OpenDocument();
+                        break;
+                    case 2:
+                        documentWorker.EditDocument();
+                        break;
+                    case 3:
+                        documentWorker.SaveDocument();
+                        break;
+                    case 4:
+                        ShowMenu();
+                        break;
+                    case 5:
+                        break;
+                    default:
+                        Console.WriteLine("Такой команды нет");
+                        break;
+                }
+            }
+            while (action != 5);
         }
     }
 }
