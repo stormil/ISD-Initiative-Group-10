@@ -6,20 +6,17 @@ using System.Threading.Tasks;
 
 namespace _7
 {
+    public enum Post
+    {
+        Janitor,
+        JuniorDeveloper,
+        MiddleDeveloper,
+        SeniorDeveloper,
+        TeamLead
+    };
+
     class Employee
     {
-        public enum Post
-        {
-            Janitor,
-            JuniorDeveloper,
-            MiddleDeveloper,
-            SeniorDeveloper,
-            TeamLead
-        };
-
-        private string name, surname;
-        private Post position;
-        private int yearsOfExperience;
         private double salary = 0, tax;
 
         public Employee(string name, string surname)
@@ -28,10 +25,17 @@ namespace _7
             this.Surname = surname;
         }
 
-        public string Name { get => name; set => name = value; }
-        public string Surname { get => surname; set => surname = value; }
-        public int YearsOfExperience { get => yearsOfExperience; set => yearsOfExperience = value; }
-        public Post Position { get => position; set => position = value; }
+        public Employee(string name, string surname, Post position, int yearsOfExperience) : this(name, surname)
+        {
+            Position = position;
+            YearsOfExperience = yearsOfExperience;
+        }
+
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public int YearsOfExperience { get; set; }
+        public Post Position { get; set; }
+
         public double Salary
         {
             get
@@ -55,19 +59,19 @@ namespace _7
             switch (salary)
             {
                 case 0:
-                    salary = 200.0 + yearsOfExperience * 10;
+                    salary = 200.0 + YearsOfExperience * 10;
                     break;
                 case 1:
-                    salary = 400.0 + yearsOfExperience * 50;
+                    salary = 400.0 + YearsOfExperience * 50;
                     break;
                 case 2:
-                    salary = 1000.0 + yearsOfExperience * 100;
+                    salary = 1000.0 + YearsOfExperience * 100;
                     break;
                 case 3:
-                    salary = 2100.0 + yearsOfExperience * 200;
+                    salary = 2100.0 + YearsOfExperience * 200;
                     break;
                 case 4:
-                    salary = 3000.0 + yearsOfExperience * 350;
+                    salary = 3000.0 + YearsOfExperience * 350;
                     break;
                 default:
                     break;

@@ -11,11 +11,7 @@ namespace _7
     {
         static void Main(string[] args)
         {
-            Employee employee = new Employee("John", "Doe")
-            {
-                Position = Employee.Post.SeniorDeveloper,
-                YearsOfExperience = 5
-            };
+            Employee employee = new Employee("John", "Doe", Post.SeniorDeveloper, 5);
             Console.WriteLine(employee.Name + " " + employee.Surname + " works at position of " + employee.Position  +
                 " and earns " + employee.Salary + ". Tax: " + employee.Tax);
             Console.ReadKey();
