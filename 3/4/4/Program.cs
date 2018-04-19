@@ -20,17 +20,20 @@ namespace _4
         }
         static void Main(string[] args)
         {
+            const string KeyExpert = "exp";
+            const string KeyPro = "pro";
+
             Console.OutputEncoding = Encoding.UTF8;
             string key;
             Console.WriteLine("Введите ключ доступа:");
             key = Console.ReadLine();
 
             DocumentWorker documentWorker;
-            if (key == "exp")
+            if (key == KeyExpert)
             {
                 documentWorker = new ExpertDocumentWorker();
             }
-            else if (key == "pro")
+            else if (key == KeyPro)
             {
                 documentWorker = new ProDocumentWorker();
             }
