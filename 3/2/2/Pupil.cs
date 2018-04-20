@@ -14,4 +14,3 @@ namespace _3._2
         public virtual void Relax() { }
     }
 }
-ё

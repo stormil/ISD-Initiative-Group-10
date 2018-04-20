@@ -9,7 +9,7 @@ namespace _3._2
 {
     class ClassRoom
     {
-        private List<Pupil> listOfPupils;
+        private List<Pupil> listOfPupils = new List<Pupil>();
         public ClassRoom(Pupil pupil1, Pupil pupil2, Pupil pupil3, Pupil pupil4)
         {
             listOfPupils.Add(pupil1);

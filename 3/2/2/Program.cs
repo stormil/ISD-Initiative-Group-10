@@ -14,8 +14,9 @@ namespace _3._2
             Pupil Egor = new ExcelentPupil();
             Pupil Borya = new GoodPupil();
             Pupil Korol = new BadPupil();
-            Console.WriteLine("press 2, 3 or 4 to make classes with 2, 3 or 4 students:");
-            int answer = Convert.ToInt32(Console.ReadLine());
+            ClassRoom FriendsClass = new ClassRoom(Vlad, Egor, Borya, Korol);
+            FriendsClass.PrintInformation();
+            Console.ReadKey();
         }
     }
 }
