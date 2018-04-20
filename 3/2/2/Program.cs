@@ -16,7 +16,6 @@ namespace _3._2
             Pupil Korol = new BadPupil();
             Console.WriteLine("press 2, 3 or 4 to make classes with 2, 3 or 4 students:");
             int answer = Convert.ToInt16(Console.ReadLine());
-            switch 
         }
     }
 }
