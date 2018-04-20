@@ -1,0 +1,6 @@
+G:\ISD\3\3.3\3.3\bin\Debug\3.3.exe
+G:\ISD\3\3.3\3.3\bin\Debug\3.3.pdb
+G:\ISD\3\3.3\3.3\obj\Debug\3.3.csprojResolveAssemblyReference.cache
+G:\ISD\3\3.3\3.3\obj\Debug\3.3.csproj.CoreCompileInputs.cache
+G:\ISD\3\3.3\3.3\obj\Debug\3.3.exe
+G:\ISD\3\3.3\3.3\obj\Debug\3.3.pdb
