@@ -28,10 +28,13 @@ namespace _3._2
             listOfPupils.Add(pupil1);
             listOfPupils.Add(pupil2);
         }
-        public void printinformation()
+        public void PrintInformation()
         {
             foreach(Pupil p in listOfPupils) {
-
+                p.Read();
+                p.Relax();
+                p.Study();
+                p.Write();
             }
         }
     }
