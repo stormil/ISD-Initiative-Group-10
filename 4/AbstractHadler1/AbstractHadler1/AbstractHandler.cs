@@ -8,6 +8,21 @@ namespace AbstractHadler1
 {
     abstract class AbstractHandler
     {
+        public void Open()
+        {
 
+        }
+        public void Create()
+        {
+
+        }
+        public void Change()
+        {
+
+        }
+        public void Save()
+        {
+
+        }
     }
 }
