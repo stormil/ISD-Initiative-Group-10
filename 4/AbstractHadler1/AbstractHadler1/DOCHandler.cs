@@ -8,5 +8,6 @@ namespace AbstractHadler1
 {
     class DOCHandler: AbstractHandler
     {
+        
     }
 }

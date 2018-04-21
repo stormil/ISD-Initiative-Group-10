@@ -8,19 +8,19 @@ namespace AbstractHadler1
 {
     abstract class AbstractHandler
     {
-        public void Open()
+        public virtual void Open()
         {
 
         }
-        public void Create()
+        public virtual void Create()
         {
 
         }
-        public void Change()
+        public virtual void Change()
         {
 
         }
-        public void Save()
+        public virtual void Save()
         {
 
         }
