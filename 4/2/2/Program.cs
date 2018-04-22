@@ -10,10 +10,18 @@ namespace _2
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Work of the player");
             IPlayable player = new Player();
             player.Play();
+            player.Pause();
+            player.Stop();
+
+            Console.WriteLine("Work of the recorder:");
             IRecodable recorder = (IRecodable)player;
             recorder.Record();
+            recorder.Pause();
+            recorder.Stop();
+
             Console.ReadKey();
         }
     }
