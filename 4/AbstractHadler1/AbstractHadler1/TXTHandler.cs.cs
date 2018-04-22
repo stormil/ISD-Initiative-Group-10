@@ -3,46 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
+
 
 namespace AbstractHadler1
 {
     class TXTHandler : AbstractHandler
     {
-       
-
         public override void Change()
         {
-            Console.WriteLine($"File before changing: \n {text}");
-            text = text.ToUpper();
-            Console.WriteLine($"File after changing: \n {text}");
+            Console.WriteLine("Txt-file changed");
         }
 
-        public override void Create(string path)
+        public override void Create()
         {
-            File.Create(path);
+            Console.WriteLine("Txt-file created");
         }
 
-        public override void Open(string path) 
+        public override void Open()
         {
-            try
-            {
-                StreamReader reader = new StreamReader(path);
-                text = reader.ReadToEnd();
-                reader.Close();
-            }
-            catch (Exception e)
-            {
-                e.ToString();
-            }
-            Console.WriteLine("File is opened.");
+            Console.WriteLine("Txt-file opened");
         }
 
-        public override void Save(string path)
+        public override void Save()
         {
-            StreamWriter writer = new StreamWriter(path);
-            writer.WriteLine(text);
-            writer.Close();
+            Console.WriteLine("Txt-file saved");
         }
     }
 }

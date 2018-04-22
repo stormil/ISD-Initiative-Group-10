@@ -259,3 +259,7 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+4/AbstractHadler1/AbstractHadler1/AbstractHandler.cs
+3/3.3/3.3/obj/Debug/3.3.csproj.CoreCompileInputs.cache
+4/AbstractHadler1/AbstractHadler1/AbstractHadler1.csproj
+4/AbstractHadler1/AbstractHadler1/Program.cs

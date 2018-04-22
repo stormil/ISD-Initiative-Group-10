@@ -10,22 +10,22 @@ namespace AbstractHadler1
     {
         public override void Change()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Doc-file changed");
         }
 
-        public override void Create(string path)
+        public override void Create()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Doc-file created");
         }
 
-        public override void Open(string path)
+        public override void Open()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Doc-file opened");
         }
 
-        public override void Save(string path)
+        public override void Save()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Doc-file saved");
         }
     }
 }

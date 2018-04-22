@@ -4,28 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace AbstractHadler1
 {
     class XMLHandler : AbstractHandler
     {
         public override void Change()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("XML-file changed");
         }
 
-        public override void Create(string path)
+        public override void Create()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("XML-file created");
         }
 
-        public override void Open(string path)
+        public override void Open()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("XML-file opened");
         }
 
-        public override void Save(string path)
+        public override void Save()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("XML-file saved");
         }
     }
 }

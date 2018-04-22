@@ -11,15 +11,21 @@ namespace AbstractHadler1
         static void Main(string[] args)
         {
             TXTHandler txtFile = new TXTHandler();
-
-            txtFile.Open("D:\\1\\txtFile.txt");
+            DOCHandler docFile = new DOCHandler();
+            XMLHandler xmlFile = new XMLHandler();
+            txtFile.Create();
+            txtFile.Open();
             txtFile.Change();
-            txtFile.Save("D:\\1\\txtFile.txt");
+            txtFile.Save();
+            docFile.Create();
+            docFile.Open();
+            docFile.Change();
+            docFile.Save();
+            xmlFile.Create();
+            xmlFile.Open();
+            xmlFile.Change();
+            xmlFile.Save();
             Console.ReadKey();
-
-
-
-
         }
     }
 }
