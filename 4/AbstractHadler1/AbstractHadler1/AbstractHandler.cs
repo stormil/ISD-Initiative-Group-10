@@ -8,21 +8,9 @@ namespace AbstractHadler1
 {
     abstract class AbstractHandler
     {
-        public virtual void Open()
-        {
-
-        }
-        public virtual void Create()
-        {
-
-        }
-        public virtual void Change()
-        {
-
-        }
-        public virtual void Save()
-        {
-
-        }
+        public abstract void Open();
+        public abstract void Create();
+        public abstract void Change();
+        public abstract void Save();
     }
 }
