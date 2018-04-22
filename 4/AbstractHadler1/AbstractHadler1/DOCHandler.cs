@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AbstractHadler1
 {
-    class DOCHandler: AbstractHandler
+    class DOCHandler : AbstractHandler
     {
         
     }
