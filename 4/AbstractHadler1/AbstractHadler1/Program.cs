@@ -10,6 +10,15 @@ namespace AbstractHadler1
     {
         static void Main(string[] args)
         {
+            TXTHandler txtFile = new TXTHandler();
+
+            txtFile.Open("D:\\1\\txtFile.txt");
+            txtFile.Change("");
+            Console.ReadKey();
+
+
+
+
         }
     }
 }
