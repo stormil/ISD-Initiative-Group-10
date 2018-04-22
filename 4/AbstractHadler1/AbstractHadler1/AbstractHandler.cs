@@ -10,9 +10,9 @@ namespace AbstractHadler1
     {
         public string Name { set; get; }
 
-        public abstract void Open(String path);
-        public abstract void Create(String path);
-        public abstract void Change(String text);
+        public abstract void Open(string path);
+        public abstract void Create(string path);
+        public abstract void Change(string text);
         public abstract void Save();
     }
 }

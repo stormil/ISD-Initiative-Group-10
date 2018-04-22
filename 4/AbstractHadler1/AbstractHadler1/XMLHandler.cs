@@ -8,5 +8,24 @@ namespace AbstractHadler1
 {
     class XMLHandler : AbstractHandler
     {
+        public override void Change(string text)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Create(string path)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Open(string path)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Save()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
