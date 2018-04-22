@@ -8,9 +8,11 @@ namespace AbstractHadler1
 {
     abstract class AbstractHandler
     {
-        public abstract void Open();
-        public abstract void Create();
-        public abstract void Change();
+        public string Name { set; get; }
+
+        public abstract void Open(String path);
+        public abstract void Create(String path);
+        public abstract void Change(String text);
         public abstract void Save();
     }
 }

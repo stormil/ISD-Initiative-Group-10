@@ -8,5 +8,24 @@ namespace AbstractHadler1
 {
     class TXTHandler : AbstractHandler
     {
+        public override void Change()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Create()
+        {
+            
+        }
+
+        public override void Open()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Save()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
