@@ -13,7 +13,8 @@ namespace AbstractHadler1
             TXTHandler txtFile = new TXTHandler();
 
             txtFile.Open("D:\\1\\txtFile.txt");
-            txtFile.Change("");
+            txtFile.Change();
+            txtFile.Save("D:\\1\\txtFile.txt");
             Console.ReadKey();
 
 

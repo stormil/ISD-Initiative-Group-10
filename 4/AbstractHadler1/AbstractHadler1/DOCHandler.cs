@@ -8,7 +8,7 @@ namespace AbstractHadler1
 {
     class DOCHandler : AbstractHandler
     {
-        public override void Change(string path)
+        public override void Change()
         {
             throw new NotImplementedException();
         }
@@ -23,7 +23,7 @@ namespace AbstractHadler1
             throw new NotImplementedException();
         }
 
-        public override void Save()
+        public override void Save(string path)
         {
             throw new NotImplementedException();
         }

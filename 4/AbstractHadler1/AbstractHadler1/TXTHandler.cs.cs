@@ -11,7 +11,7 @@ namespace AbstractHadler1
     {
        
 
-        public override void Change(string path)
+        public override void Change()
         {
             Console.WriteLine($"File before changing: \n {text}");
             text = text.ToUpper();
@@ -38,9 +38,11 @@ namespace AbstractHadler1
             Console.WriteLine("File is opened.");
         }
 
-        public override void Save()
+        public override void Save(string path)
         {
             StreamWriter writer = new StreamWriter(path);
+            writer.WriteLine(text);
+            writer.Close();
         }
     }
 }
