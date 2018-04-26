@@ -7,7 +7,7 @@ namespace _5._4
 {
     static class Util
     {
-        public static void Replace(this string a, string b)
+        public static void Replace(this string a, string b, string c)
         {
             Console.WriteLine("REPLACED!!!");
 
@@ -18,7 +18,7 @@ namespace _5._4
             Console.WriteLine("IndexOf!!");
         }
 
-        public static void SubString (this int i, int j)
+        public static void SubString (this string s , int i, int j)
         {
             Console.WriteLine(5);
         }

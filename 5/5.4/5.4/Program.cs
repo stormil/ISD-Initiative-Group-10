@@ -10,16 +10,19 @@ namespace _5._4
         static void Main(string[] args)
         {
             string s = "s, string";
-            string k = "";
-            s.Replace(k);
+            string k = " ";
+            string f = " ";
+            s.Replace(f, k);
 
             string p = "2.2, string";
             string q = "";
             p.IndexOf(q) ;
 
-            int g = 2;
+            string g = "s, string";
             int l = 0;
-            g.SubString(l);
+            int v = 1;
+            g.SubString(v,l);
+            
 
             Console.ReadKey();
         }
