@@ -8,48 +8,45 @@ namespace _2
 {
     static class Sorter
     {
-        static public int Partition(int[] array, int left, int right)
+        public static void SortQuick(this int[] a, int left, int right)
         {
-            int pivot = array[left];
-            while (true)
+            if (left > right || left < 0 || right < 0) return;
+
+            int index = Partition(a, left, right);
+
+            if (index != -1)
             {
-                while (array[left] < pivot)
-                {
-                    left++;
-                }
-
-                while (array[right] > pivot)
-                {
-                    right--;
-                }
-
-                if (left < right)
-                {  
-                    int temp = array[right];
-                    array[right] = array[left];
-                    array[left] = temp;
-                }
-                else
-                {
-                    return right;
-                }
+                SortQuick(a, left, index - 1);
+                SortQuick(a, index + 1, right);
             }
         }
 
-        static public void SortQuick(this int[] array, int left, int right)
+        private static int Partition(int[] A, int left, int right)
         {
-            if (left < right)
+            if (left > right) return -1;
+
+            int end = left;
+
+            int pivot = A[right];
+            for (int i = left; i < right; i++)
             {
-                int pivot = Partition(array, left, right);
-                if (pivot > 1)
+                if (A[i] < pivot)
                 {
-                    SortQuick(array, left, pivot - 1);
-                }
-                if (pivot + 1 < right)
-                {
-                    SortQuick(array, pivot + 1, right);
+                    Swap(A, i, end);
+                    end++;
                 }
             }
+
+            Swap(A, end, right);
+
+            return end;
+        }
+
+        private static void Swap(int[] A, int left, int right)
+        {
+            int tmp = A[left];
+            A[left] = A[right];
+            A[right] = tmp;
         }
     }
 }
