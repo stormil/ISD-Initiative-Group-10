@@ -31,6 +31,7 @@ namespace _3
             StruktTaker(myStruct);
             Console.WriteLine("Класс: " + myClass.charge);
             Console.WriteLine("Структура: " + myStruct.charge);
+            Console.WriteLine("Данная программа демонстрирует то, что при передаче структур создается полностью независимая локальная копия проекта.");
             Console.ReadKey();
         }
         static void ClassTaker(MyClass myClass)
