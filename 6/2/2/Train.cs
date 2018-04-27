@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _6._3
+namespace _2
 {
     struct Train
     {
@@ -16,9 +16,9 @@ namespace _6._3
     {
         private Train[] array = new Train[8];
         private static int SizeOfArray = 8;
-       public void Initialisation()
+        public void Initialisation()
         {
-            for(int i = 0; i < SizeOfArray; i++)
+            for (int i = 0; i < SizeOfArray; i++)
             {
                 Console.WriteLine("Input number of Train: ");
                 array[i].Number = Convert.ToInt32(Console.ReadLine());
@@ -27,10 +27,10 @@ namespace _6._3
                 Console.WriteLine("Input Year, Month and Day of departure: ");
                 array[i].Date = new DateTime(Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()));
             }
-            sorting();
+            Sorting();
         }
 
-        public void sorting()
+        public void Sorting()
         {
             Train temp;
             for (int i = 0; i < SizeOfArray - 1; i++)
@@ -57,14 +57,14 @@ namespace _6._3
         public void InfoTrain(int number)
         {
             int counter = -1;
-            for(int i = 0; i < SizeOfArray; i++)
+            for (int i = 0; i < SizeOfArray; i++)
             {
-                if(array[i].Number == number)
+                if (array[i].Number == number)
                 {
                     counter = i;
                 }
             }
-            if(counter < 0)
+            if (counter < 0)
             {
                 Console.WriteLine("There are trains with your number not-exists");
             }
