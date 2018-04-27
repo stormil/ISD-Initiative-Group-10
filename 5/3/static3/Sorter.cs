@@ -8,38 +8,64 @@ namespace static3
 {
     static class Sorter
     {
-        public static void SortQuick(this int[] a, int left, int right)
+        public static void SortQuick(this int[] a, int left, int right, bool flag)
         {
+           
             if (left > right || left < 0 || right < 0) return;
 
-            int index = Partition(a, left, right);
+            int index = Partition(a, left, right, flag);
 
             if (index != -1)
             {
-                SortQuick(a, left, index - 1);
-                SortQuick(a, index + 1, right);
+                SortQuick(a, left, index - 1, flag);
+                SortQuick(a, index + 1, right, flag);
             }
         }
 
-        private static int Partition(int[] A, int left, int right)
+        private static int Partition(int[] A, int left, int right, bool flag)
         {
-            if (left > right) return -1;
-
-            int end = left;
-
-            int pivot = A[right];
-            for (int i = left; i < right; i++)
+            if (flag == true)
             {
-                if (A[i] < pivot)
+                if (left > right) return -1;
+
+                int end = left;
+
+                int pivot = A[right];
+                for (int i = left; i < right; i++)
                 {
-                    Swap(A, i, end);
-                    end++;
+                    if (A[i] < pivot)
+                    {
+                        Swap(A, i, end);
+                        end++;
+                    }
+                }
+
+                Swap(A, end, right);
+
+                return end;
+            }
+            else
+            {
+                {
+                    if (left > right) return -1;
+
+                    int end = left;
+
+                    int pivot = A[right];
+                    for (int i = left; i < right; i++)
+                    {
+                        if (A[i] > pivot)
+                        {
+                            Swap(A, i, end);
+                            end++;
+                        }
+                    }
+
+                    Swap(A, end, right);
+
+                    return end;
                 }
             }
-
-            Swap(A, end, right);
-
-            return end;
         }
 
         private static void Swap(int[] A, int left, int right)

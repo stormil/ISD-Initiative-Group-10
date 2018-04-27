@@ -23,27 +23,31 @@ namespace static3
                         i--;
                     }
                 }
-                
-                a.SortQuick(0, n - 1);
-
-                Console.WriteLine("Input 1 if you want sorting from the beginning to the end");
-                Console.WriteLine("Else input no 1");
-                int flag = Convert.ToInt32(Console.ReadLine());
+                bool flag = true;
+                string ans;
+                Console.WriteLine("Input Yes if you want sorting from the beginning to the end");
+                Console.WriteLine("Else input No");
+                ans = Console.ReadLine();
+                switch (ans)
+                {
+                    case "Yes":
+                        {
+                            flag = true;
+                            break;
+                        }
+                    case "No":
+                        {
+                            flag = false;
+                            break;
+                        }
+                }
+                a.SortQuick(0, n - 1, flag);
                 Console.WriteLine("Sorted array:");
-                if (flag == 1)
+                for (int i = 0; i < n; i++)
                 {
-                    for (int i = 0; i < n; i++)
-                    {
-                        Console.Write(a[i] + " ");
-                    }
+                    Console.Write(a[i] + " ");
                 }
-                else
-                {
-                    for(int i = n - 1; i >= 0; i--)
-                    {
-                        Console.Write(a[i] + " ");
-                    }
-                }
+
             }
             else
             {
