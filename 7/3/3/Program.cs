@@ -28,15 +28,15 @@ namespace _3
                     long sum = 0;
                     for (int i = 0; i < array.Length; i++)
                     {
-                        if (array[i]!=null)
+                        if (array[i] != null)
                         {
                             sum += array[i]();
                         }
                     }
-                    return (double) sum / array.Length;
+                    return (double)sum / array.Length;
                 };
 
-                Console.WriteLine("Average is: "+ArrayCalculator(delegateArray));
+                Console.WriteLine("Average is: " + ArrayCalculator(delegateArray));
             }
             else
             {
