@@ -6,25 +6,28 @@ using System.Threading.Tasks;
 
 namespace _3
 {
-    class MyDictionary<TKey, TValue>
+    class MyDictionary<TKey, TValue> where TKey:IComparable
     {
-        Dictionary<TKey, TValue> dictionary = new Dictionary<TKey, TValue>();
-        public int Amount { get => dictionary.Count; }
+        List<TKey> keys = new List<TKey>();
+        List<TValue> values = new List<TValue>();
+        public int Amount { get => keys.Count; }
 
-        public TValue this[TKey key]
+        public TValue this[TKey index]
         {
-            get
-            {
-                return dictionary[key];
-            }
-            set
-            {
-                dictionary[key] = value;
-            }
+            get => values[keys.IndexOf(index)];
+            set => Add(index, value);
         }
         public void Add(TKey key, TValue value)
         {
-            dictionary[key] = value;
+            if (keys.Contains(key))
+            {
+                values[keys.IndexOf(key)] = value;
+            }
+            else
+            {
+                keys.Add(key);
+                values.Add(value);
+            }
         }
     }
 }
