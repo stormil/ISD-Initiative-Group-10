@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace _3
 {
-    class MyDictionary<TKey, TValue> where TKey:IComparable
+    class MyDictionary<TKey, TValue> : Dictionary<TKey, TValue>
+        where TKey : IComparable
     {
         List<TKey> keys = new List<TKey>();
         List<TValue> values = new List<TValue>();
@@ -14,7 +15,14 @@ namespace _3
 
         public TValue this[TKey index]
         {
-            get => values[keys.IndexOf(index)];
+            get
+            {
+                if (keys.Contains(index))
+                {
+                    return values[keys.IndexOf(index)];
+                }
+                throw new ArgumentException();
+            }
             set => Add(index, value);
         }
         public void Add(TKey key, TValue value)
