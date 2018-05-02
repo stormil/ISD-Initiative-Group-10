@@ -10,10 +10,39 @@ namespace _2
     {
         static void Main(string[] args)
         {
-            int x = int.Parse(Console.ReadLine());
             MyList<int> my = new MyList<int>();
-            my.Add(x);
-            Console.WriteLine(my[1]);
+            int n;
+            bool flag = true;
+            while (flag == true)
+            {
+                n = int.Parse(Console.ReadLine());
+                switch (n)
+                {
+                    case 1:
+                        {
+                            Console.WriteLine("Enter Number");
+                            int x = int.Parse(Console.ReadLine());
+                            my.Add(x);
+                            break;
+                        }
+                    case 2:
+                        {
+                            Console.WriteLine("Enter Index");
+                            int x = int.Parse(Console.ReadLine());
+                            Console.WriteLine(my[x]);
+                            break;
+                        }
+                    case 3:
+                        {
+                            Console.WriteLine("Emount of Numbers is: " + my.Count);
+                            break;
+                        }
+                    default:
+                        {
+                            break;
+                        }
+                }
+            }
             Console.ReadKey();
         }
     }

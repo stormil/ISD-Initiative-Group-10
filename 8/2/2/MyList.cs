@@ -25,8 +25,8 @@ namespace _2
             };
             temp.next = begin;
             begin = temp;
-            ++count;
             temp.index = count;
+            count++;
         }
         public MyList()
         {
@@ -38,7 +38,7 @@ namespace _2
         {
             get
             {
-                return Count;
+                return count;
             }
         }
         public T this[int index]
@@ -53,6 +53,10 @@ namespace _2
                     {
                         break;
 
+                    }
+                    else
+                    {
+                        break;
                     }
                 }
                 return temp.info;
