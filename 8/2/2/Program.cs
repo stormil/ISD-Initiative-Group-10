@@ -39,6 +39,7 @@ namespace _2
                         }
                     default:
                         {
+                            flag = false;
                             break;
                         }
                 }

@@ -33,7 +33,7 @@ namespace _2
             begin = null;
             count = 0;
         }
-        private int count;
+        private int count = -1;
         public int Count
         {
             get
