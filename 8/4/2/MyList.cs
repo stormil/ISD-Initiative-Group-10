@@ -26,7 +26,7 @@ namespace _2
             temp.next = begin;
             begin = temp;
             ++count;
-            temp.index = count;
+            temp.index = count - 1;
         }
         public MyList()
         {
@@ -38,7 +38,7 @@ namespace _2
         {
             get
             {
-                return Count;
+                return count;
             }
         }
         public T this[int index]
@@ -52,7 +52,10 @@ namespace _2
                     if (temp.index == index)
                     {
                         break;
+
                     }
+
+                    temp = temp.next;
                 }
                 return temp.info;
                 //return (T)Convert.ChangeType(temp, typeof(T));
