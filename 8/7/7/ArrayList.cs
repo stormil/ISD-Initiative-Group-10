@@ -9,7 +9,7 @@ namespace _7
 {
     public class ArrayList
     {
-        private object[] items;
+        private object[] items = new object[0];
         public object this[int index]
         {
             get
@@ -17,7 +17,11 @@ namespace _7
                 CheckIndex(index);
                 return items[index];
             }
-            set => Add(value);
+            set
+            {
+                RemoveAt(index);
+                Insert(index, value);
+            }
         }
 
         public int Count => items.Length;
@@ -25,6 +29,14 @@ namespace _7
         public void Add(object value)
         {
             Insert(items.Length, value);
+        }
+
+        public void Add(params object[] value)
+        {
+            for (int i = 0; i < value.Length; i++)
+            {
+                Insert(items.Length, value[i]);
+            }
         }
 
         public void Clear()
@@ -44,16 +56,6 @@ namespace _7
             return false;
         }
 
-        //public void CopyTo(Array array, int index)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public IEnumerator GetEnumerator()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
         public int IndexOf(object value)
         {
             for (int i = 0; i < items.Length; i++)
@@ -67,8 +69,8 @@ namespace _7
         }
         public void Insert(int index, object value)
         {
-            CheckIndex(index);
             object[] temporary = new object[items.Length + 1];
+            CheckIndex(index);
             for (int i = 0, j = 0; i < temporary.Length; i++, j++)
             {
                 if (i == index)
@@ -76,7 +78,10 @@ namespace _7
                     temporary[i] = value;
                     i++;
                 }
-                temporary[i] = items[j];
+                if (i < temporary.Length)
+                {
+                    temporary[i] = items[j];
+                }
             }
             items = temporary;
         }
@@ -102,7 +107,7 @@ namespace _7
         }
         private void CheckIndex(int index)
         {
-            if (index < 0 || index >= items.Length)
+            if (index < 0 || index > items.Length)
             {
                 throw new ArgumentException();
             }
