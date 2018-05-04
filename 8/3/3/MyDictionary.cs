@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _3
 {
-    class MyDictionary<TKey, TValue> where TKey:IComparable
+    class MyDictionary<TKey, TValue>
     {
         List<TKey> keys = new List<TKey>();
         List<TValue> values = new List<TValue>();
