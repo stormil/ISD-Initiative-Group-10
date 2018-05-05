@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace _3
 {
-    class Pair<TKey, TValue>
+    class KeyValuePair<TKey, TValue>
     {
-        public Pair(TKey key, TValue value)
+        public KeyValuePair(TKey key, TValue value)
         {
             this.Key = key;
             this.Value = value;
@@ -20,11 +20,11 @@ namespace _3
 
         public override string ToString()
         {
-            return "[ " + Key + ", " + Value + " ]";
+            return "[" + Key + ", " + Value + "]";
         }
     }
 
-    class MyDictionary<TKey, TValue> : IEnumerable <Pair<TKey, TValue>>
+    class MyDictionary<TKey, TValue> : IEnumerable<KeyValuePair<TKey, TValue>>
     {
         List<TKey> keys = new List<TKey>();
         List<TValue> values = new List<TValue>();
@@ -68,9 +68,12 @@ namespace _3
             }
         }
 
-        public IEnumerator<Pair<TKey, TValue>> GetEnumerator()
+        public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
         {
-            return new MyDictionaryEnumerator(this);
+            for (int i = 0; i < keys.Count; i++)
+            {
+                yield return new KeyValuePair<TKey, TValue>(keys[i], values[i]);
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -78,51 +81,13 @@ namespace _3
             return GetEnumerator();
         }
 
-        class MyDictionaryEnumerator: IEnumerator<Pair<TKey, TValue>>
+        public bool ContainsKey(TKey key)
         {
-            MyDictionary<TKey, TValue> dictionary;
-            TKey currentKey;
-            TValue currentValue;
-            int index;
-
-            public MyDictionaryEnumerator(MyDictionary<TKey, TValue> dictionary)
-            {
-                this.dictionary = dictionary;
-                currentKey = default(TKey);
-            }
-
-            public Pair<TKey, TValue> Current
-            {
-                get
-                {
-                    currentKey = dictionary.Keys[index];
-                    currentValue = dictionary.Values[index];
-                    return new Pair<TKey, TValue>(currentKey, currentValue);
-                }
-            }
-
-            object IEnumerator.Current => Current;
-
-            public void Dispose()
-            {
-            }
-
-            public bool MoveNext()
-            {
-                if (EqualityComparer<TKey>.Default.Equals(currentKey, default(TKey)))
-                {
-                    index = 0;
-                }
-                else
-                {
-                    index++;
-                }
-                return index < dictionary.Keys.Count;
-            }
-
-            public void Reset()
-            {
-            }
+            return keys.Contains(key);
+        }
+        public bool ContainsValue(TValue value)
+        {
+            return values.Contains(value);
         }
     }
 }
