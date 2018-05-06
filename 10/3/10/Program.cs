@@ -13,7 +13,7 @@ namespace _3
     {
         static void Main(string[] args)
         {
-            string filePath = FileSearcher.SearchFile("upcast.txt", @"D:/NOW/");
+            string filePath = FileSearcher.SearchFile("lorem.txt", Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory())));
             if (filePath != null)
             {
                 FileEditor fileReader = new FileEditor();

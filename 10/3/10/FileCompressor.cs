@@ -20,6 +20,7 @@ namespace _3
                 {
                     zipStream.Write(bytes, 0, bytes.Length);
                 }
+                Console.WriteLine("Compression is succesful");
             }
             catch (Exception e)
             {
