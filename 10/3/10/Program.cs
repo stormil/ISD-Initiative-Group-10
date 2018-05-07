@@ -37,7 +37,7 @@ namespace _3
             {
                 FileEditor fileReader = new FileEditor();
                 fileReader.TryReadToForm(filePath);
-                FileCompressor.Compress(filePath, filePath + "_Compressed");
+                FileCompressor.Compress(filePath, filePath + ".gz");
             }
 
             Console.ReadKey();
