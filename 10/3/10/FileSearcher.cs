@@ -26,12 +26,16 @@ namespace _3
         public static string SearchFile(string name, string searchArea)
         {
             string[] results = SearchByFullName(name, searchArea);
+            if (results == null)
+            {
+                return null;
+            }
             if (results.Length == 0)
             {
                 Console.WriteLine("We have not found such file");
                 return null;
             }
-            else if (results != null)
+            else 
             {
                 string filePath;
                 if (results.Length == 1)
@@ -53,10 +57,6 @@ namespace _3
                     filePath = results[userIndex];
                 }
                 return filePath;
-            }
-            else
-            {
-                return null;
             }
         }
     }
