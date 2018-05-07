@@ -13,7 +13,26 @@ namespace _3
     {
         static void Main(string[] args)
         {
-            string filePath = FileSearcher.SearchFile("lorem.txt", Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory())));
+            Console.WriteLine("1 - demonstrate work of the program on ready file \n2 - input your own filename and search area");
+            int userChoice;
+            while ((!int.TryParse(Console.ReadLine(), out userChoice)) || (userChoice >= 3) || (userChoice <= 0))
+            {
+                Console.WriteLine("Wrong index. Try again");
+            }
+            string fileName, areaOfSearch;
+            if (userChoice == 1)
+            {
+                fileName = "lorem.txt";
+                areaOfSearch = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
+            }
+            else
+            {
+                Console.WriteLine("Input filename");
+                fileName = Console.ReadLine();
+                Console.WriteLine("Input area of search:");
+                areaOfSearch = Console.ReadLine();
+            }
+            string filePath = FileSearcher.SearchFile(fileName, areaOfSearch);
             if (filePath != null)
             {
                 FileEditor fileReader = new FileEditor();
