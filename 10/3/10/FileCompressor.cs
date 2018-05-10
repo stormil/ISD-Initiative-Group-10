@@ -15,8 +15,8 @@ namespace _3
             try
             {
                 var bytes = File.ReadAllBytes(filePath);
-                using (FileStream fileStream = new FileStream(newFilePath, FileMode.OpenOrCreate))
-                using (GZipStream zipStream = new GZipStream(fileStream, CompressionMode.Compress, false))
+                using (var fileStream = new FileStream(newFilePath, FileMode.OpenOrCreate))
+                using (var zipStream = new GZipStream(fileStream, CompressionMode.Compress, false))
                 {
                     zipStream.Write(bytes, 0, bytes.Length);
                 }

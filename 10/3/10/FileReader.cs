@@ -15,10 +15,10 @@ namespace _3
         private void ReadToForm(string fileName)
         {
 
-            using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
-            using (StreamReader streamReader = new StreamReader(fileStream))
+            using (var fileStream = new FileStream(fileName, FileMode.Open))
+            using (var streamReader = new StreamReader(fileStream))
             {
-                string s = streamReader.ReadLine();
+                var s = streamReader.ReadLine();
                 while (s != null)
                 {
                     textForm.textBox.AppendText(s);

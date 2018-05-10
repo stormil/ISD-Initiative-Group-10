@@ -25,7 +25,7 @@ namespace _3
 
         public static string SearchFile(string name, string searchArea)
         {
-            string[] results = SearchByFullName(name, searchArea);
+            var results = SearchByFullName(name, searchArea);
             if (results == null)
             {
                 return null;
@@ -49,7 +49,7 @@ namespace _3
                     {
                         Console.WriteLine(i + " - " + results[i]);
                     }
-                    int userIndex = 0;
+                    var userIndex = 0;
                     while ((!int.TryParse(Console.ReadLine(), out userIndex)) || (userIndex >= results.Length) || (userIndex < 0))
                     {
                         Console.WriteLine("Wrong index. Try again");

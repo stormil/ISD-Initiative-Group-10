@@ -32,10 +32,10 @@ namespace _3
                 Console.WriteLine("Input area of search:");
                 areaOfSearch = Console.ReadLine();
             }
-            string filePath = FileSearcher.SearchFile(fileName, areaOfSearch);
+            var filePath = FileSearcher.SearchFile(fileName, areaOfSearch);
             if (filePath != null)
             {
-                FileEditor fileReader = new FileEditor();
+                var fileReader = new FileEditor();
                 fileReader.TryReadToForm(filePath);
                 FileCompressor.Compress(filePath, filePath + ".gz");
             }
